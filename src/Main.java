@@ -1,13 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import list.ListaTarefas;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+        ListaTarefas listaTarefas = new ListaTarefas();
+
+        System.out.println(" O numero na lista de tarefas é de : " + listaTarefas.numeroList());
+        listaTarefas.adicionarTarefa("Tarefa 1");
+        listaTarefas.adicionarTarefa("Tarefa 1");
+        listaTarefas.adicionarTarefa("Tarefa 2");
+
+        System.out.println(" O numero na lista de tarefas é de : " + listaTarefas.numeroList());
+
+        listaTarefas.removeTarefas("Tarefa 2");
+
+        System.out.println(" O numero na lista de tarefas é de : " + listaTarefas.numeroList());
+
+        listaTarefas.mostrarDescricao();
     }
 }
